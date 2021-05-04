@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="ant">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/ant.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/bloat-1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-all-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-bench.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-core-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-cs-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-cs.optional-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-db4ounit-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-instrumentation-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-nqopt-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-optional-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-osgi-test-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-taj-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-tools-java5.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-osgi-java5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/Faculdade/db4o/db4o-8.0/lib/db4o-8.0.276.16149-osgi-java5.jar!/src" />
+    </SOURCES>
+  </library>
+</component>
