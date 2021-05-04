@@ -6,14 +6,14 @@ import com.db4o.ObjectSet;
 
 import java.util.List;
 
-    public class Main {
+public class first_f1 {
 
-        public static String DB4OFILENAME = "C:\\Users\\maria\\IdeaProjects\\DB4O_2\\data\\db.txt";
+    public static String DB4OFILENAME = "C:\\Users\\maria\\IdeaProjects\\DB4O_2\\data\\db.txt";
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            ObjectContainer db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), DB4OFILENAME);
-            try {
+        ObjectContainer db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), DB4OFILENAME);
+        try {
             // storeFirstPilot
             Pilot pilot1 = new Pilot("Michael Schumacher", 100);
             db.store(pilot1);
@@ -30,7 +30,7 @@ import java.util.List;
             System.out.println("retrieveAllPilots \n");
             retrieveAllPilots(db);
 
-            List <Pilot> pilots = db.query(Pilot.class);
+            List<Pilot> pilots = db.query(Pilot.class);
 
             System.out.println("retrievePilotByName\n");
             Pilot proto1 = new Pilot("Michael Schumacher", 0);
@@ -50,43 +50,51 @@ import java.util.List;
             System.out.println("Added 11 points for " + found);
             retrieveAllPilots(db);
 
+            deleteFirstPilotByName(db);
 
-            } finally {
-                db.close();
-            }
-        }
 
-        /**
-         *
-         * @param db ObjectContainer
-         */
-        public static void retrieveAllPilotsQBE(ObjectContainer db) {
-            Pilot proto = new Pilot(null, 0);
-            ObjectSet result = db.queryByExample(proto);
-            listResult(result);
-        }
-        public static void retrievePilotByExactPoints(List<?> result){
-
-        }
-
-        /**
-         *
-         * @param result List
-         */
-        public static void listResult(List<?> result) {
-            System.out.println(result.size());
-            for (Object o : result) {
-                System.out.println(o);
-            }
-        }
-
-        /**
-         *
-         * @param db ObjectContainer
-         */
-        public static void retrieveAllPilots(ObjectContainer db) {
-            Pilot proto = new Pilot(null, 0);
-            ObjectSet result = db.queryByExample(proto);
-            listResult(result);
+        } finally {
+            db.close();
         }
     }
+
+    /**
+     * @param db ObjectContainer
+     */
+    public static void retrieveAllPilotsQBE(ObjectContainer db) {
+        Pilot proto = new Pilot(null, 0);
+        ObjectSet result = db.queryByExample(proto);
+        listResult(result);
+    }
+
+
+    /**
+     * @param result List
+     */
+    public static void listResult(List<?> result) {
+        System.out.println(result.size());
+        for (Object o : result) {
+            System.out.println(o);
+        }
+    }
+
+    /**
+     * @param db ObjectContainer
+     */
+    public static void retrieveAllPilots(ObjectContainer db) {
+        Pilot proto = new Pilot(null, 0);
+        ObjectSet result = db.queryByExample(proto);
+        listResult(result);
+    }
+
+    public static void deleteFirstPilotByName(ObjectContainer db) {
+        ObjectSet result = db
+                .queryByExample(new Pilot("Michael Schumacher", 0));
+        Pilot found = (Pilot) result.next();
+        db.delete(found);
+        System.out.println("Deleted " + found);
+        retrieveAllPilots(db);
+    }
+
+}
+
